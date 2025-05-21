@@ -1,0 +1,6 @@
+/* Ocultar el carrusel en móviles */
+        @media (max-width: 576px) {
+            #mainCarousel {
+                display: none;
+            }
+        }
