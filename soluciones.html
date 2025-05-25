@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones - Contaminación del aire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navbar (coherente con index.html) -->
+    <header class="bg-light text-primary text-center py-5 shadow-lg rounded-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white rounded-pill shadow-sm mx-auto px-3" style="max-width: 900px;">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-semibold text-primary" href="index.html">Contaminación</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="index.html#causas" class="nav-link text-primary">Causas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#efectos" class="nav-link text-primary">Efectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="soluciones.html" class="nav-link text-primary active">Soluciones</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Más
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.html#estadisticas">Estadísticas</a></li>
+                                <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <button class="btn btn-outline-primary d-none d-lg-block ms-lg-3" data-bs-toggle="modal"
+                        data-bs-target="#infoModal">
+                        Información
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sección de Soluciones -->
+    <div class="container my-5">
+        <h2 class="text-center mb-5 display-4 fw-bold text-primary">Acciones contra la contaminación</h2>
+        
+        <div class="row g-4">
+            <!-- Acciones Individuales -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Acciones Individuales</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Usar transporte público o bicicleta</li>
+                            <li class="list-group-item">Reducir el consumo de plásticos</li>
+                            <li class="list-group-item">Mantener vehículos en buen estado</li>
+                            <li class="list-group-item">Plantar árboles en comunidades</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Acciones Gubernamentales -->
+            <div class="col-md-6">
+                <div class="card h-100 shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Acciones Gubernamentales</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Inversión en energías renovables</li>
+                            <li class="list-group-item">Legislación estricta para industrias</li>
+                            <li class="list-group-item">Mejorar infraestructura de transporte público</li>
+                            <li class="list-group-item">Campañas de concienciación</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulario de Contacto -->
+    <div class="container my-5" id="contacto">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0">Formulario de Contacto</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre completo</label>
+                                <input type="text" class="form-control" id="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo electrónico</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje</label>
+                                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Responsive -->
+    <footer class="bg-light py-4 mt-5 shadow-lg">
+        <div class="container text-center">
+            <p class="text-muted mb-0">&copy; 2023 Contaminación del Aire. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Modal Información (coherente con index.html) -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="infoModalLabel">Información</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Sitio web educativo sobre la contaminación del aire en zonas urbanas.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
