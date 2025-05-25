@@ -1,6 +1,135 @@
+/* Bootstrap teal colors used as variables for reference */
+/* We'll simulate with these classes */
+.bg-teal-100 { background-color: #CCFBF1; color: #134E4A; }
+.bg-teal-200 { background-color: #99F6E4; color: #0F766E; }
+.bg-teal-300 { background-color: #5EEAD4; color: #0D9488; }
+.bg-teal-400 { background-color: #2DD4BF; color: #14B8A6; }
+.bg-teal-500 { background-color: #14B8A6; color: white; }
+.bg-teal-600 { background-color: #0D9488; color: white; }
+.bg-teal-700 { background-color: #0F766E; color: white; }
+.bg-teal-800 { background-color: #115E59; color: white; }
+.bg-teal-900 { background-color: #134E4A; color: white; }
+
+/* Colores para niveles de contaminación (semáforo) */
+:root {
+  --color-baja: #28a745; /* Verde */
+  --color-media: #ffc107; /* Amarillo */
+  --color-alta: #fd7e14; /* Naranja */
+  --color-muy-alta: #dc3545; /* Rojo */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #e0f2f1; /* Mantenemos el fondo original que combina con el teal */
+  color: #134E4A;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+/* Zonas clickeables estilo "nubes" */
+.zona {
+  position: absolute;
+  width: 120px;
+  padding: 10px;
+  border-radius: 50% / 40%;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: 0 0 8px rgba(21, 184, 166, 0.9);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zona small {
+  display: block;
+  font-weight: 400;
+  font-size: 0.75rem;
+  margin-top: 4px;
+}
+
+/* Estilos para las nubes según nivel de contaminación */
+.contaminacion-baja {
+  background-color: rgba(40, 167, 69, 0.7); /* Verde semitransparente */
+  box-shadow: 0 0 8px rgba(40, 167, 69, 0.9);
+}
+
+.contaminacion-baja:hover {
+  background-color: rgba(40, 167, 69, 0.9);
+  box-shadow: 0 0 15px rgba(40, 167, 69, 1);
+}
+
+.contaminacion-media {
+  background-color: rgba(255, 193, 7, 0.7); /* Amarillo semitransparente */
+  box-shadow: 0 0 8px rgba(255, 193, 7, 0.9);
+  color: #343a40; /* Texto oscuro para el amarillo */
+}
+
+.contaminacion-media:hover {
+  background-color: rgba(255, 193, 7, 0.9);
+  box-shadow: 0 0 15px rgba(255, 193, 7, 1);
+}
+
+.contaminacion-alta {
+  background-color: rgba(253, 126, 20, 0.7); /* Naranja semitransparente */
+  box-shadow: 0 0 8px rgba(253, 126, 20, 0.9);
+}
+
+.contaminacion-alta:hover {
+  background-color: rgba(253, 126, 20, 0.9);
+  box-shadow: 0 0 15px rgba(253, 126, 20, 1);
+}
+
+.contaminacion-muy-alta {
+  background-color: rgba(220, 53, 69, 0.7); /* Rojo semitransparente */
+  box-shadow: 0 0 8px rgba(220, 53, 69, 0.9);
+}
+
+.contaminacion-muy-alta:hover {
+  background-color: rgba(220, 53, 69, 0.9);
+  box-shadow: 0 0 15px rgba(220, 53, 69, 1);
+}
+
+.grafico canvas {
+  max-width: 100% !important;
+  height: 250px !important;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+/* Estilo para resaltar la fila de la tabla */
+.table-highlight {
+    background-color: #ffeaa7 !important; /* Un amarillo suave para resaltar */
+    font-weight: bold;
+    color: #495057; /* Color de texto para el resaltado */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Texto explicacion-nivel */
+#explicacion-nivel {
+  font-size: 1rem;
+  min-height: 80px;
+  line-height: 1.4;
+}
+
 /* Ocultar el carrusel en móviles */
-        @media (max-width: 576px) {
-            #mainCarousel {
-                display: none;
-            }
-        }
+@media (max-width: 576px) {
+    #mainCarousel {
+        display: none;
+    }
+}

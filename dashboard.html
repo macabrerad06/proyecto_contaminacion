@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simulador de Contaminación</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="d-flex justify-content-between align-items-center px-4 py-3 bg-teal-700 text-white border-bottom border-white">
+    <div class="logo fw-bold fs-4">MI SITIO</div>
+    <nav>
+      <button class="btn btn-outline-light me-2">INICIO</button>
+      <button class="btn btn-light me-2 active">DASHBOARD</button>
+      <button class="btn btn-outline-light">SOLUCIONES</button>
+    </nav>
+  </header>
+
+  <main class="container my-4">
+    <h1 class="text-center mb-5 display-4 fw-bold text-teal-800">
+      <span class="d-block">Respirando Mejor:</span>
+      <span class="d-block text-secondary-emphasis fs-3">Tu Guía Interactiva de la Calidad del Aire</span>
+    </h1>
+
+    <div class="row">
+      <div class="col-lg-7 position-relative mb-4">
+        <img src="imagenes/mapa_ciudad.png" alt="Mapa de la ciudad" class="img-fluid rounded shadow" />
+
+        <div id="zona-norte" class="zona nube contaminacion-media" style="top: 25%; left: 45%;">Norte<br><small>Medio contaminado</small></div>
+        <div id="zona-centro" class="zona nube contaminacion-alta" style="top: 45%; left: 40%;">Centro<br><small>Muy contaminado</small></div>
+        <div id="zona-sur" class="zona nube contaminacion-media" style="top: 75%; left: 35%;">Sur<br><small>Medio contaminado</small></div>
+        <div id="zona-valle" class="zona nube contaminacion-muy-alta" style="top: 55%; left: 55%;">Valle<br><small>Muy contaminado</small></div>
+        <div id="zona-rucu" class="zona nube contaminacion-baja" style="top: 20%; left: 20%;">Volcán Rucu<br><small>Baja contaminación</small></div>
+      </div>
+
+      <div class="col-lg-5">
+        <h3 class="text-teal-800 mb-3">Nivel de Contaminación y Recomendaciones</h3>
+
+        <div id="explicacion-nivel" class="bg-teal-100 p-3 rounded mb-4">
+          Selecciona una zona en el mapa para ver la explicación del nivel de contaminación.
+        </div>
+
+        <div class="grafico bg-teal-200 p-3 rounded mb-4">
+          <canvas id="contaminacionChart" style="max-height: 300px;"></canvas>
+        </div>
+
+        <table class="table table-striped table-bordered bg-teal-300 text-teal-900">
+          <thead class="table-dark">
+            <tr><th>Nivel</th><th>Recomendación</th></tr>
+          </thead>
+          <tbody id="tabla-recomendaciones">
+            <tr><td>Bajo</td><td>Actividad al aire libre permitida sin restricciones.</td></tr>
+            <tr><td>Medio</td><td>Personas sensibles deben evitar esfuerzos prolongados.</td></tr>
+            <tr><td>Alto</td><td>Evitar actividad física al aire libre. Usar mascarillas.</td></tr>
+            <tr><td>Muy Alto</td><td>Permanezca en interiores, evite salir y use mascarilla N95.</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-teal-700 text-white text-center py-3 mt-4 border-top border-white">
+    FOOTER
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="myChar.js"></script>
+</body>
+</html>
