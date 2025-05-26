@@ -23,3 +23,43 @@ Según la OMS, el 90% de la población mundial respira aire con niveles dañinos
 * **Chart.js:** Librería de JavaScript para la creación de gráficos interactivos en el dashboard[cite: 14].
 
 ## Estructura del Proyecto
+
+
+/
+├── index.html
+├── dashboard.html
+├── soluciones.html
+├── styles.css
+├── myChar.js (Para la lógica de Chart.js en el dashboard)
+├── imagenes/
+│   └── mapa_ciudad.png
+└── README.md
+
+
+## Cómo Ejecutar el Proyecto
+
+1.  **Clonar el repositorio:**
+    ```bash
+    git clone https://github.com/macabrerad06/proyecto_contaminacion
+    ```
+2.  **Navegar al directorio del proyecto:**
+    ```bash
+    cd proyecto_contaminacion
+    ```
+3.  **Abrir los archivos HTML:** Simplemente abre `index.html` en tu navegador web preferido. Las otras páginas (`dashboard.html`, `soluciones.html`) pueden ser accedidas desde la barra de navegación.
+
+## Contribuciones
+
+Este proyecto es parte de un trabajo final y no está abierto a contribuciones externas en este momento.
+
+## Contacto
+
+Miguel Cabrera
+Francisco Jimenez
+Jorge Yugsi
+
+nrc: 21507
+
+Proyecto de primer parcial
+
+---
