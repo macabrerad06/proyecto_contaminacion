@@ -2,151 +2,137 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soluciones - Contaminación del aire</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Soluciones - Contaminación del Aire</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-    <!-- Navbar (coherente con index.html) -->
-    <header class="bg-light text-primary text-center py-5 shadow-lg rounded-bottom">
-        <nav class="navbar navbar-expand-lg navbar-light bg-white rounded-pill shadow-sm mx-auto px-3" style="max-width: 900px;">
-            <div class="container-fluid">
-                <a class="navbar-brand fw-semibold text-primary" href="index.html">Contaminación</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a href="index.html#causas" class="nav-link text-primary">Causas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="index.html#efectos" class="nav-link text-primary">Efectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="soluciones.html" class="nav-link text-primary active">Soluciones</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-primary" href="#" id="navbarDropdown" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                Más
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="index.html#estadisticas">Estadísticas</a></li>
-                                <li><a class="dropdown-item" href="#contacto">Contacto</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <button class="btn btn-outline-primary d-none d-lg-block ms-lg-3" data-bs-toggle="modal"
-                        data-bs-target="#infoModal">
-                        Información
-                    </button>
-                </div>
+
+    <header class="navbar navbar-expand-md navbar-dark bg-teal-700 shadow-sm px-4 py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand logo fw-bold fs-4" href="index.html">Contaminación del Aire en Zonas Urbanas</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light text-white mx-1" href="index.html">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-outline-light text-white mx-1" href="dashboard.html">DASHBOARD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-light text-teal-700 mx-1 active" aria-current="page" href="soluciones.html">SOLUCIONES</a>
+                    </li>
+                </ul>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!-- Sección de Soluciones -->
-    <div class="container my-5">
-        <h2 class="text-center mb-5 display-4 fw-bold text-primary">Acciones contra la contaminación</h2>
-        
+    <main class="container my-5">
+        <h1 class="text-center mb-5 display-4 fw-bold text-teal-800 animate__animated animate__fadeInDown">
+            <span class="d-block">Acciones Contra la Contaminación:</span>
+            <span class="d-block text-secondary-emphasis fs-3">Un Paso a la Vez Hacia un Aire Más Limpio</span>
+        </h1>
+
         <div class="row g-4">
-            <!-- Acciones Individuales -->
             <div class="col-md-6">
-                <div class="card h-100 shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="mb-0">Acciones Individuales</h3>
+                <div class="card h-100 shadow-sm bg-teal-100 text-teal-900 border-0 hover-lift">
+                    <div class="card-header bg-teal-700 text-white fw-bold fs-5 rounded-top-2">
+                        Acciones Individuales
                     </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Usar transporte público o bicicleta</li>
-                            <li class="list-group-item">Reducir el consumo de plásticos</li>
-                            <li class="list-group-item">Mantener vehículos en buen estado</li>
-                            <li class="list-group-item">Plantar árboles en comunidades</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-bicycle me-2"></i>Usar transporte público o bicicleta</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-recycle me-2"></i>Reducir el consumo de plásticos y reciclar</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-tools me-2"></i>Mantener vehículos en buen estado y realizar revisiones</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-tree me-2"></i>Plantar árboles en comunidades y jardines</li>
                         </ul>
                     </div>
                 </div>
             </div>
 
-            <!-- Acciones Gubernamentales -->
             <div class="col-md-6">
-                <div class="card h-100 shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="mb-0">Acciones Gubernamentales</h3>
+                <div class="card h-100 shadow-sm bg-teal-100 text-teal-900 border-0 hover-lift">
+                    <div class="card-header bg-teal-700 text-white fw-bold fs-5 rounded-top-2">
+                        Acciones Gubernamentales
                     </div>
                     <div class="card-body">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Inversión en energías renovables</li>
-                            <li class="list-group-item">Legislación estricta para industrias</li>
-                            <li class="list-group-item">Mejorar infraestructura de transporte público</li>
-                            <li class="list-group-item">Campañas de concienciación</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-currency-dollar me-2"></i>Inversión en energías renovables (solar, eólica)</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-gavel me-2"></i>Legislación estricta para industrias contaminantes</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-train-front-fill me-2"></i>Mejorar infraestructura de transporte público y alternativo</li>
+                            <li class="list-group-item bg-teal-100 text-teal-900"><i class="bi bi-megaphone-fill me-2"></i>Campañas de concienciación y educación ambiental</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Formulario de Contacto -->
-    <div class="container my-5" id="contacto">
-        <div class="row justify-content-center">
-            <div class="col-lg-8">
-                <div class="card shadow">
-                    <div class="card-header bg-primary text-white">
-                        <h3 class="mb-0">Formulario de Contacto</h3>
-                    </div>
-                    <div class="card-body">
-                        <form>
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre completo</label>
-                                <input type="text" class="form-control" id="nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" rows="4" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Enviar mensaje</button>
-                        </form>
+        <div class="container my-5" id="contacto">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg bg-teal-100 text-teal-900 border-0 rounded-3">
+                        <div class="card-header bg-teal-700 text-white text-center fw-bold fs-5 rounded-top-3">
+                            Contáctanos
+                        </div>
+                        <div class="card-body p-4">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label text-teal-800 fw-semibold">Nombre
+                                        completo</label>
+                                    <input type="text" class="form-control form-control-lg border-teal-400" id="nombre"
+                                        required placeholder="Tu nombre y apellido">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label text-teal-800 fw-semibold">Correo
+                                        electrónico</label>
+                                    <input type="email" class="form-control form-control-lg border-teal-400" id="email"
+                                        required placeholder="ejemplo@dominio.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="mensaje" class="form-label text-teal-800 fw-semibold">Mensaje</label>
+                                    <textarea class="form-control border-teal-400" id="mensaje" rows="5" required
+                                        placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-teal-700 text-white w-100 btn-lg shadow-sm hover-grow">Enviar
+                                    mensaje</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Footer Responsive -->
-    <footer class="bg-light py-4 mt-5 shadow-lg">
-        <div class="container text-center">
-            <p class="text-muted mb-0">&copy; 2023 Contaminación del Aire. Todos los derechos reservados.</p>
-        </div>
+    <footer class="bg-teal-700 text-white text-center py-3 mt-5 border-top border-white shadow-sm">
+        <p class="mb-0">&copy; 2025 Contaminación del Aire en Zonas Urbanas. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Modal Información (coherente con index.html) -->
     <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-3 shadow">
+                <div class="modal-header bg-teal-700 text-white border-0 rounded-top-3">
                     <h5 class="modal-title" id="infoModalLabel">Información</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Cerrar"></button>
                 </div>
-                <div class="modal-body">
-                    Sitio web educativo sobre la contaminación del aire en zonas urbanas.
+                <div class="modal-body bg-teal-100 text-teal-900 rounded-bottom-3">
+                    Este es un sitio web educativo dedicado a informar sobre la contaminación del aire en zonas urbanas,
+                    sus causas, efectos y posibles soluciones.
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </body>
 
 </html>

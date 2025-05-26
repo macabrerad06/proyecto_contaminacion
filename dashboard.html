@@ -1,71 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Simulador de Contaminación</title>
+  <title>Dashboard - Calidad del Aire</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
-  <header class="d-flex justify-content-between align-items-center px-4 py-3 bg-teal-700 text-white border-bottom border-white">
-    <div class="logo fw-bold fs-4">MI SITIO</div>
-    <nav>
-      <button class="btn btn-outline-light me-2">INICIO</button>
-      <button class="btn btn-light me-2 active">DASHBOARD</button>
-      <button class="btn btn-outline-light">SOLUCIONES</button>
-    </nav>
+  <header class="navbar navbar-expand-md navbar-dark bg-teal-700 shadow-sm px-4 py-3">
+    <div class="container-fluid">
+      <a class="navbar-brand logo fw-bold fs-4" href="index.html">Contaminación del Aire en Zonas Urbanas</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-light text-white mx-1" href="index.html">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-light text-teal-700 mx-1 active" aria-current="page"
+              href="dashboard.html">DASHBOARD</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link btn btn-outline-light text-white mx-1" href="soluciones.html">SOLUCIONES</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <main class="container my-4">
-    <h1 class="text-center mb-5 display-4 fw-bold text-teal-800">
-      <span class="d-block">Respirando Mejor:</span>
-      <span class="d-block text-secondary-emphasis fs-3">Tu Guía Interactiva de la Calidad del Aire</span>
+  <main class="container my-5">
+    <h1 class="text-center mb-5 display-4 fw-bold text-teal-800 animate__animated animate__fadeInDown">
+      <span class="d-block dashboard-title-long">Monitoreo Urbano:</span>
+      <span class="d-block text-secondary-emphasis fs-3 dashboard-title-long">Niveles de Contaminación en Tiempo
+        Real</span>
     </h1>
 
     <div class="row">
       <div class="col-lg-7 position-relative mb-4">
-        <img src="imagenes/mapa_ciudad.png" alt="Mapa de la ciudad" class="img-fluid rounded shadow" />
+        <img src="imagenes/mapa_ciudad.png" alt="Mapa de la ciudad" class="img-fluid rounded shadow-lg mapa-animado" />
 
-        <div id="zona-norte" class="zona nube contaminacion-media" style="top: 25%; left: 45%;">Norte<br><small>Medio contaminado</small></div>
-        <div id="zona-centro" class="zona nube contaminacion-alta" style="top: 45%; left: 40%;">Centro<br><small>Muy contaminado</small></div>
-        <div id="zona-sur" class="zona nube contaminacion-media" style="top: 75%; left: 35%;">Sur<br><small>Medio contaminado</small></div>
-        <div id="zona-valle" class="zona nube contaminacion-muy-alta" style="top: 55%; left: 55%;">Valle<br><small>Muy contaminado</small></div>
-        <div id="zona-rucu" class="zona nube contaminacion-baja" style="top: 20%; left: 20%;">Volcán Rucu<br><small>Baja contaminación</small></div>
+        <div id="zona-norte" class="zona nube contaminacion-media hover-grow" style="top: 25%; left: 45%;">
+          Norte<br><small>Medio contaminado</small></div>
+        <div id="zona-centro" class="zona nube contaminacion-alta hover-grow" style="top: 45%; left: 40%;">
+          Centro<br><small>Muy contaminado</small></div>
+        <div id="zona-sur" class="zona nube contaminacion-media hover-grow" style="top: 75%; left: 35%;">
+          Sur<br><small>Medio contaminado</small></div>
+        <div id="zona-valle" class="zona nube contaminacion-muy-alta hover-grow" style="top: 55%; left: 55%;">
+          Valle<br><small>Muy contaminado</small></div>
+        <div id="zona-rucu" class="zona nube contaminacion-baja hover-grow" style="top: 20%; left: 20%;">Volcán
+          Rucu<br><small>Baja contaminación</small></div>
       </div>
 
       <div class="col-lg-5">
-        <h3 class="text-teal-800 mb-3">Nivel de Contaminación y Recomendaciones</h3>
+        <h3 class="text-teal-800 mb-3 fw-bold">Nivel de Contaminación y Recomendaciones</h3>
 
-        <div id="explicacion-nivel" class="bg-teal-100 p-3 rounded mb-4">
+        <div id="explicacion-nivel" class="bg-teal-100 p-4 rounded mb-4 shadow-sm border border-teal-200">
           Selecciona una zona en el mapa para ver la explicación del nivel de contaminación.
         </div>
 
-        <div class="grafico bg-teal-200 p-3 rounded mb-4">
+        <div class="grafico bg-teal-200 p-4 rounded mb-4 shadow-sm border border-teal-300">
           <canvas id="contaminacionChart" style="max-height: 300px;"></canvas>
         </div>
 
-        <table class="table table-striped table-bordered bg-teal-300 text-teal-900">
-          <thead class="table-dark">
-            <tr><th>Nivel</th><th>Recomendación</th></tr>
-          </thead>
-          <tbody id="tabla-recomendaciones">
-            <tr><td>Bajo</td><td>Actividad al aire libre permitida sin restricciones.</td></tr>
-            <tr><td>Medio</td><td>Personas sensibles deben evitar esfuerzos prolongados.</td></tr>
-            <tr><td>Alto</td><td>Evitar actividad física al aire libre. Usar mascarillas.</td></tr>
-            <tr><td>Muy Alto</td><td>Permanezca en interiores, evite salir y use mascarilla N95.</td></tr>
-          </tbody>
-        </table>
+        <div class="table-responsive">
+          <table
+            class="table table-striped table-hover table-bordered bg-teal-300 text-teal-900 rounded-3 overflow-hidden shadow-sm">
+            <thead class="table-dark bg-teal-800">
+              <tr>
+                <th>Nivel</th>
+                <th>Recomendación</th>
+              </tr>
+            </thead>
+            <tbody id="tabla-recomendaciones">
+              <tr>
+                <td>Bajo</td>
+                <td>Actividad al aire libre permitida sin restricciones.</td>
+              </tr>
+              <tr>
+                <td>Medio</td>
+                <td>Personas sensibles deben evitar esfuerzos prolongados.</td>
+              </tr>
+              <tr>
+                <td>Alto</td>
+                <td>Evitar actividad física al aire libre. Usar mascarillas.</td>
+              </tr>
+              <tr>
+                <td>Muy Alto</td>
+                <td>Permanezca en interiores, evite salir y use mascarilla N95.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   </main>
 
-  <footer class="bg-teal-700 text-white text-center py-3 mt-4 border-top border-white">
-    FOOTER
+  <footer class="bg-teal-700 text-white text-center py-3 mt-5 border-top border-white shadow-sm">
+    <p class="mb-0">&copy; 2025 Contaminación del Aire en Zonas Urbanas. Todos los derechos reservados.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="myChar.js"></script>
 </body>
+
 </html>
