@@ -10,8 +10,7 @@ const chartColors = {
 
 const chartBorderColors = {
     baja: 'rgba(40, 167, 69, 1)',
-    media: 'rgba(255, 193, 7, 1)',
-    alta: 'rgba(253, 126, 20, 1)',
+    media: 'rgb(255, 230, 7)',
     muyAlta: 'rgba(220, 53, 69, 1)'
 };
 
@@ -21,13 +20,13 @@ const zonasDatos = {
         niveles: [30, 40, 45, 50, 48, 35],
         explicacion: "Zona Norte: Nivel medio de contaminación. Se recomienda reducir actividades al aire libre para personas sensibles.",
         recomendacionKey: 'Medio', // Indica qué fila resaltar en la tabla general
-        colorClase: 'contaminacion-media' // Clase CSS para el color de la nube
+        colorClase: 'contaminacion-media' 
     },
     'zona-centro': {
         niveles: [70, 80, 85, 90, 88, 75],
         explicacion: "Zona Centro: Nivel muy alto de contaminación. Se recomienda evitar actividades al aire libre y usar mascarillas.",
         recomendacionKey: 'Muy Alto', // Indica qué fila resaltar
-        colorClase: 'contaminacion-muy-alta' // Mantengo alta por el ejemplo, pero podrías cambiar a 'contaminacion-muy-alta' si quieres el rojo puro
+        colorClase: 'contaminacion-muy-alta' 
     },
     'zona-sur': {
         niveles: [35, 40, 42, 47, 45, 38],

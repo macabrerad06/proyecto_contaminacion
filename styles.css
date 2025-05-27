@@ -60,28 +60,6 @@ body {
     font-size: 1.25rem;
 }
 
-@media (max-width: 767.98px) {
-    .navbar-brand.logo {
-        font-size: 1rem;
-    }
-    .navbar {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    /* Ocultar el título del dashboard en móviles si es demasiado largo */
-    .dashboard-title-long {
-        display: none;
-    }
-}
-
-/* Nuevo estilo para mostrar un título más corto en móviles para el dashboard */
-@media (min-width: 768px) {
-    .dashboard-title-short {
-        display: none;
-    }
-}
-
-
 .navbar-nav .nav-link {
     padding: 0.5rem 1rem;
     margin: 0.25rem;
@@ -229,4 +207,27 @@ body {
 /* Footer */
 footer {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+
+@media (max-width: 767.98px) {
+    .navbar-brand.logo {
+        font-size: 1rem;
+    }
+    .navbar {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    /* Ocultar el título del dashboard en móviles si es demasiado largo */
+    .dashboard-title-long {
+        display: none;
+    }
+}
+
+/* Nuevo estilo para mostrar un título más corto en móviles para el dashboard */
+@media (min-width: 768px) {
+    .dashboard-title-short {
+        display: none;
+    }
 }
