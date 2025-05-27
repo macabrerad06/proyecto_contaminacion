@@ -27,7 +27,7 @@ const zonasDatos = {
         niveles: [70, 80, 85, 90, 88, 75],
         explicacion: "Zona Centro: Nivel muy alto de contaminación. Se recomienda evitar actividades al aire libre y usar mascarillas.",
         recomendacionKey: 'Muy Alto', // Indica qué fila resaltar
-        colorClase: 'contaminacion-alta' // Mantengo alta por el ejemplo, pero podrías cambiar a 'contaminacion-muy-alta' si quieres el rojo puro
+        colorClase: 'contaminacion-muy-alta' // Mantengo alta por el ejemplo, pero podrías cambiar a 'contaminacion-muy-alta' si quieres el rojo puro
     },
     'zona-sur': {
         niveles: [35, 40, 42, 47, 45, 38],
