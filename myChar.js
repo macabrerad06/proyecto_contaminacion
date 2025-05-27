@@ -20,14 +20,14 @@ const zonasDatos = {
     'zona-norte': {
         niveles: [30, 40, 45, 50, 48, 35],
         explicacion: "Zona Norte: Nivel medio de contaminación. Se recomienda reducir actividades al aire libre para personas sensibles.",
-        recomendacionKey: 'Medio', // Indica qué fila resaltar en la tabla general
-        colorClase: 'contaminacion-media' // Clase CSS para el color de la nube
+        recomendacionKey: 'Medio',
+        colorClase: 'contaminacion-media'
     },
     'zona-centro': {
         niveles: [70, 80, 85, 90, 88, 75],
         explicacion: "Zona Centro: Nivel muy alto de contaminación. Se recomienda evitar actividades al aire libre y usar mascarillas.",
-        recomendacionKey: 'Muy Alto', // Indica qué fila resaltar
-        colorClase: 'contaminacion-muy-alta' // Mantengo alta por el ejemplo, pero podrías cambiar a 'contaminacion-muy-alta' si quieres el rojo puro
+        recomendacionKey: 'Muy Alto',
+        colorClase: 'contaminacion-alta'
     },
     'zona-sur': {
         niveles: [35, 40, 42, 47, 45, 38],
@@ -52,7 +52,8 @@ const zonasDatos = {
 // Configuración inicial del gráfico con datos neutros
 let currentChart;
 
-function crearGrafico(niveles, zonaId) {
+// Función flecha para crear el gráfico
+const crearGrafico = (niveles, zonaId) => {
     if(currentChart) currentChart.destroy();
 
     const zona = zonasDatos[zonaId];
@@ -106,13 +107,12 @@ function crearGrafico(niveles, zonaId) {
             },
             plugins: {
                 legend: {
-                    labels: { color: '#134E4A' } // Mantenemos el color del texto teal de Bootstrap
+                    labels: { color: '#134E4A' }
                 }
             }
         }
     });
-}
-
+};
 
 // Todas las recomendaciones posibles en la tabla
 const allRecommendations = [
@@ -121,7 +121,8 @@ const allRecommendations = [
     { nivel: 'Muy Alto', texto: 'Permanezca en interiores, evite salir y use mascarilla N95.' }
 ];
 
-function actualizarRecomendaciones(nivelRecomendacion) {
+// Función flecha para actualizar recomendaciones
+const actualizarRecomendaciones = (nivelRecomendacion) => {
     const tbody = document.getElementById('tabla-recomendaciones');
     tbody.innerHTML = ''; // Limpiar tabla
 
@@ -129,13 +130,14 @@ function actualizarRecomendaciones(nivelRecomendacion) {
         const tr = document.createElement('tr');
         tr.innerHTML = `<td>${rec.nivel}</td><td>${rec.texto}</td>`;
         if (rec.nivel === nivelRecomendacion) {
-            tr.classList.add('table-highlight'); // Añadir clase para resaltar
+            tr.classList.add('table-highlight');
         }
         tbody.appendChild(tr);
     });
-}
+};
 
-function actualizarZona(zonaId) {
+// Función flecha para actualizar la zona seleccionada
+const actualizarZona = (zonaId) => {
     const zona = zonasDatos[zonaId];
     if (!zona) return;
 
@@ -148,7 +150,7 @@ function actualizarZona(zonaId) {
 
     // Actualizar tabla de recomendaciones y resaltar la fila correcta
     actualizarRecomendaciones(zona.recomendacionKey);
-}
+};
 
 // Al cargar, mostramos la zona norte por defecto
 window.onload = () => {
