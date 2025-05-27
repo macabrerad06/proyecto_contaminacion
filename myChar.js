@@ -10,7 +10,7 @@ const chartColors = {
 
 const chartBorderColors = {
     baja: 'rgba(40, 167, 69, 1)',
-    media: 'rgb(255, 230, 7)',
+    media: 'rgba(255, 193, 7, 1)',
     muyAlta: 'rgba(220, 53, 69, 1)'
 };
 
